@@ -1,0 +1,111 @@
+.gv-journey {
+  background-color: var(--color-bg-white);
+}
+
+.gv-journey-steps {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 20px 0 30px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gv-journey-steps::-webkit-scrollbar {
+  height: 3px;
+}
+
+.gv-journey-step {
+  flex: 0 0 auto;
+  width: 120px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gv-journey-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  margin-bottom: 14px;
+  border: 2px solid var(--color-primary-border);
+  transition: all var(--transition-base);
+}
+
+.gv-journey-step:hover .gv-journey-icon {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.gv-journey-label {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 6px;
+}
+
+.gv-journey-desc {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  line-height: 1.4;
+  max-width: 110px;
+  margin: 0 auto;
+}
+
+.gv-journey-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  color: var(--color-primary);
+  font-size: 18px;
+  font-weight: 600;
+  flex-shrink: 0;
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .gv-journey-steps {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .gv-journey-step {
+    width: 100%;
+    max-width: 280px;
+    flex-direction: row;
+    text-align: left;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .gv-journey-step:last-child {
+    border-bottom: none;
+  }
+
+  .gv-journey-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .gv-journey-arrow {
+    display: none;
+  }
+
+  .gv-journey-desc {
+    max-width: none;
+    margin: 0;
+  }
+}

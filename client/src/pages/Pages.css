@@ -1,0 +1,178 @@
+/* ============================================
+   SHARED PAGE STYLES
+   ============================================ */
+
+/* --- Page Wrapper --- */
+.gv-page {
+  padding-top: 72px; /* navbar height */
+  min-height: 100vh;
+}
+
+/* --- Page Hero (small page header) --- */
+.gv-page-hero {
+  padding: 60px 0 48px;
+  background-color: var(--color-bg-white);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.gv-page-hero .gv-container {
+  text-align: center;
+}
+
+.gv-page-hero .gv-badge {
+  margin-bottom: 16px;
+}
+
+.gv-page-hero h1 {
+  margin-bottom: 16px;
+}
+
+.gv-page-hero p {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.gv-page-hero h1 .text-primary {
+  color: var(--color-primary);
+}
+
+/* --- Section: CTA Strip --- */
+.gv-cta-strip {
+  background-color: var(--color-bg-blue-tint);
+  border-top: 1px solid var(--color-primary-border);
+  border-bottom: 1px solid var(--color-primary-border);
+  padding: 32px 0;
+}
+
+.gv-cta-strip .gv-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.gv-cta-strip-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.gv-cta-strip-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.gv-cta-strip-text h3 {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 4px;
+}
+
+.gv-cta-strip-text p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* --- Two-Column Layout --- */
+.gv-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+/* --- Flow Diagram (shared) --- */
+.gv-flow-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 32px;
+}
+
+.gv-flow-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  padding: 24px 20px;
+  background: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  min-width: 160px;
+}
+
+.gv-flow-box-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.gv-flow-box-icon.gvt-icon {
+  background-color: var(--color-primary);
+  color: #fff;
+  width: 64px;
+  height: 64px;
+}
+
+.gv-flow-box h4 {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.gv-flow-box p {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin: 0;
+  max-width: 140px;
+}
+
+.gv-flow-arrow-h {
+  color: var(--color-text-light);
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+  .gv-two-col {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .gv-cta-strip .gv-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .gv-flow-visual {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .gv-flow-arrow-h {
+    transform: rotate(90deg);
+  }
+}

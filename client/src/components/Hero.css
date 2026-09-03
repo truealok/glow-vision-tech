@@ -1,0 +1,171 @@
+.gv-hero {
+  padding: 140px 0 80px;
+  background-color: var(--color-bg-white);
+  overflow: hidden;
+}
+
+.gv-hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Content */
+.gv-hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gv-hero-title {
+  font-size: 3.25rem;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-top: 12px;
+}
+
+.gv-hero-highlight {
+  color: var(--color-primary);
+}
+
+.gv-hero-description {
+  font-size: var(--font-size-lg);
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  max-width: 520px;
+}
+
+.gv-hero-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+/* Flow Diagram */
+.gv-hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gv-flow-diagram {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 40px 24px;
+  background: linear-gradient(135deg, var(--color-bg-light) 0%, var(--color-bg-blue-tint) 100%);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  position: relative;
+}
+
+.gv-flow-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  min-width: 130px;
+}
+
+.gv-flow-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.gv-flow-icon-gvt {
+  width: 80px;
+  height: 80px;
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
+}
+
+.gv-flow-gvt-logo {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.gv-flow-label {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.gv-flow-label-gvt {
+  color: var(--color-primary);
+  font-size: var(--font-size-base);
+}
+
+.gv-flow-sub {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  max-width: 140px;
+  line-height: 1.4;
+}
+
+.gv-flow-arrow {
+  color: var(--color-text-light);
+  flex-shrink: 0;
+}
+
+@media (max-width: 992px) {
+  .gv-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .gv-hero-content {
+    align-items: center;
+  }
+
+  .gv-hero-description {
+    max-width: 100%;
+  }
+
+  .gv-hero-buttons {
+    justify-content: center;
+  }
+
+  .gv-hero {
+    padding: 120px 0 60px;
+  }
+
+  .gv-hero-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .gv-flow-diagram {
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px 20px;
+  }
+
+  .gv-flow-arrow {
+    transform: rotate(90deg);
+  }
+
+  .gv-hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .gv-hero-buttons .gv-btn {
+    justify-content: center;
+    width: 100%;
+  }
+}

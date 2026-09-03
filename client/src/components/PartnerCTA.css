@@ -1,0 +1,47 @@
+.gv-partner-cta {
+  padding: 0;
+}
+
+.gv-cta-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  background-color: var(--color-navy);
+  border-radius: var(--radius-xl);
+  padding: 60px 56px;
+}
+
+.gv-cta-content h2 {
+  color: #fff;
+  font-size: var(--font-size-3xl);
+  margin-bottom: 12px;
+}
+
+.gv-cta-content p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: var(--font-size-lg);
+  max-width: 480px;
+  line-height: 1.6;
+}
+
+.gv-cta-action {
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .gv-cta-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 32px;
+    gap: 28px;
+  }
+
+  .gv-cta-content h2 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .gv-cta-content p {
+    max-width: none;
+  }
+}

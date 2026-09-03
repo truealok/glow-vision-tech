@@ -1,0 +1,108 @@
+.gv-business-flow {
+  background-color: var(--color-bg-light);
+}
+
+.gv-flow-steps {
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  padding: 20px 0 40px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gv-flow-steps::-webkit-scrollbar {
+  height: 4px;
+}
+
+.gv-flow-steps::-webkit-scrollbar-thumb {
+  background: var(--color-primary-border);
+  border-radius: 2px;
+}
+
+.gv-flow-step {
+  flex: 0 0 auto;
+  width: 180px;
+  text-align: center;
+  position: relative;
+  scroll-snap-align: center;
+  padding: 0 12px;
+}
+
+.gv-flow-step-number {
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.gv-flow-step-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background-color: var(--color-bg-white);
+  border: 2px solid var(--color-primary-border);
+  color: var(--color-primary);
+  transition: all var(--transition-base);
+}
+
+.gv-flow-step:hover .gv-flow-step-icon {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.gv-flow-step-title {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 8px;
+}
+
+.gv-flow-step-desc {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  max-width: 160px;
+  margin: 0 auto;
+}
+
+.gv-flow-step-connector {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .gv-flow-steps {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 20px 0;
+  }
+
+  .gv-flow-step {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .gv-flow-step:last-child {
+    border-bottom: none;
+  }
+
+  .gv-flow-step-connector {
+    display: block;
+    color: var(--color-primary);
+    font-size: 18px;
+    margin-top: 16px;
+  }
+}

@@ -1,0 +1,64 @@
+/* ============================================
+   FOR MANUFACTURERS PAGE STYLES
+   ============================================ */
+
+.gv-benefits-mfg-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.gv-benefit-mfg-card {
+  padding: 28px 24px;
+  text-align: center;
+}
+
+.gv-benefit-mfg-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  margin: 0 auto 16px;
+  transition: all var(--transition-base);
+}
+
+.gv-benefit-mfg-card:hover .gv-benefit-mfg-icon {
+  background-color: var(--color-primary);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.gv-benefit-mfg-card h4 {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 8px;
+}
+
+.gv-benefit-mfg-card p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.gv-benefits-section {
+  padding-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .gv-benefits-mfg-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .gv-benefits-mfg-grid {
+    grid-template-columns: 1fr;
+  }
+}

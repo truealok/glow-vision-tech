@@ -1,0 +1,195 @@
+/* ============================================
+   CONTACT US PAGE STYLES
+   ============================================ */
+
+/* Brand in Hero */
+.gv-contact-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+/* Contact Cards Grid */
+.gv-contact-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.gv-contact-card {
+  text-align: center;
+  padding: 32px 24px;
+}
+
+.gv-contact-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  margin: 0 auto 16px;
+}
+
+.gv-contact-card h3 {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 12px;
+}
+
+.gv-contact-card-value {
+  display: block;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+  margin-bottom: 4px;
+}
+
+.gv-contact-card-value:hover {
+  text-decoration: underline;
+}
+
+.gv-contact-card-note {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* Social Card */
+.gv-contact-social-card {
+  grid-column: 3 / 4;
+}
+
+.gv-contact-social-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.gv-contact-social-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 8px;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  color: var(--color-text-secondary);
+}
+
+.gv-contact-social-item:hover {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.gv-contact-social-item span {
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+}
+
+/* Leadership Section */
+.gv-contact-leadership {
+  text-align: center;
+  padding-top: 32px;
+  border-top: 1px solid var(--color-border);
+}
+
+.gv-contact-leadership h3 {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 32px;
+}
+
+.gv-contact-leadership-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.gv-contact-leader-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  background: var(--color-bg-light);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  text-align: left;
+}
+
+.gv-contact-leader-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.gv-contact-leader-info h4 {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 2px;
+}
+
+.gv-contact-leader-info p {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin: 0 0 4px;
+}
+
+.gv-contact-leader-info a {
+  font-size: var(--font-size-xs);
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.gv-contact-leader-info a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .gv-contact-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gv-contact-social-card {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 576px) {
+  .gv-contact-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .gv-contact-social-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gv-contact-leadership-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gv-contact-leader-card {
+    justify-content: center;
+    text-align: center;
+  }
+}

@@ -1,0 +1,75 @@
+.gv-services {
+  background-color: var(--color-bg-white);
+}
+
+.gv-text-primary {
+  color: var(--color-primary);
+}
+
+.gv-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.gv-service-card {
+  text-align: center;
+  padding: 40px 28px;
+  position: relative;
+}
+
+.gv-service-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  transition: all var(--transition-base);
+}
+
+.gv-service-card:hover .gv-service-icon {
+  background-color: var(--color-primary);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.gv-service-number {
+  display: block;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  color: var(--color-text-light);
+  margin-bottom: 8px;
+}
+
+.gv-service-title {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--color-text-primary);
+}
+
+.gv-service-desc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+  .gv-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .gv-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gv-service-card {
+    padding: 32px 24px;
+  }
+}

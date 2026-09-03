@@ -1,0 +1,56 @@
+.gv-benefits {
+  background-color: var(--color-bg-white);
+}
+
+.gv-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.gv-benefit-card {
+  padding: 32px 24px;
+}
+
+.gv-benefit-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  margin-bottom: 16px;
+  transition: all var(--transition-base);
+}
+
+.gv-benefit-card:hover .gv-benefit-icon {
+  background-color: var(--color-primary);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.gv-benefit-card h3 {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.gv-benefit-card p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+  .gv-benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .gv-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
