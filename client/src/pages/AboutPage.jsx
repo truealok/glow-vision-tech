@@ -1,4 +1,5 @@
 import React from 'react';
+import Logo from '../components/Logo';
 import './Pages.css';
 import './AboutPage.css';
 
@@ -45,9 +46,11 @@ const AboutPage = () => {
             {/* Glow Vision Tech */}
             <div className="gv-about-flow-box gv-about-flow-center">
               <div className="gv-about-flow-logo">
-                <span className="gv-logo-icon" style={{ width: 40, height: 40, fontSize: 13 }}>GV</span>
-                <span style={{ fontWeight: 800, fontSize: 14, letterSpacing: '0.5px' }}>GLOW</span>
-                <span style={{ fontWeight: 600, fontSize: 10, color: 'var(--color-text-muted)', letterSpacing: '1px' }}>VISION TECH</span>
+                <Logo size={36} showText={false} />
+                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                  <span style={{ fontWeight: 800, fontSize: 14, letterSpacing: '0.5px' }}>GLOW</span>
+                  <span style={{ fontWeight: 600, fontSize: 10, color: 'var(--color-text-muted)', letterSpacing: '1px' }}>VISION TECH</span>
+                </div>
               </div>
               <p style={{ fontWeight: 600, color: 'var(--color-text-primary)', fontSize: 'var(--font-size-sm)', margin: 0 }}>We connect. We market. We deliver.</p>
             </div>

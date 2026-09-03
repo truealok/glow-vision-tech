@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FiCheck, FiArrowRight } from 'react-icons/fi';
 import { submitManufacturerLead } from '../services/api';
+import Logo from '../components/Logo';
 import './Pages.css';
 import './PartnerPage.css';
 
@@ -93,11 +94,7 @@ const PartnerPage = () => {
             {/* Left Side — Info */}
             <div className="gv-partner-info">
               <div className="gv-partner-logo">
-                <span className="gv-logo-icon" style={{ width: 44, height: 44, fontSize: 14 }}>GV</span>
-                <div className="gv-logo-text">
-                  <span className="gv-logo-name">GLOW</span>
-                  <span className="gv-logo-tagline">VISION TECH</span>
-                </div>
+                <Logo size={40} />
               </div>
               <h2>Let's Start a<br />Conversation</h2>
               <p>

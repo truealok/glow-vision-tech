@@ -3,6 +3,7 @@ const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const dotenv = require('dotenv');
+
 const connectDB = require('./config/db');
 const manufacturerRoutes = require('./routes/manufacturerRoutes');
 const { notFound, errorHandler } = require('./middleware/errorMiddleware');
@@ -19,11 +20,20 @@ const app = express();
 app.use(helmet());
 
 // CORS configuration
+const allowedOrigins =
+  process.env.NODE_ENV === 'production'
+    ? [
+        'https://glow-vision-tech.vercel.app',
+        'https://glowvisiontech.com'
+      ]
+    : [
+        'http://localhost:5173',
+        'http://localhost:3000'
+      ];
+
 app.use(
   cors({
-    origin: process.env.NODE_ENV === 'production'
-      ? 'https://glowvisiontech.com'
-      : ['http://localhost:5173', 'http://localhost:3000'],
+    origin: allowedOrigins,
     credentials: true,
   })
 );
@@ -37,13 +47,16 @@ if (process.env.NODE_ENV === 'development') {
 app.use(express.json({ limit: '1mb' }));
 app.use(express.urlencoded({ extended: true, limit: '1mb' }));
 
-// API Routes
-app.use('/api/manufacturer-leads', manufacturerRoutes);
-
 // Health check
 app.get('/api/health', (req, res) => {
-  res.status(200).json({ status: 'ok', timestamp: new Date().toISOString() });
+  res.status(200).json({
+    status: 'ok',
+    timestamp: new Date().toISOString(),
+  });
 });
+
+// API Routes
+app.use('/api/manufacturer-leads', manufacturerRoutes);
 
 // 404 handler
 app.use(notFound);
@@ -53,6 +66,9 @@ app.use(errorHandler);
 
 // Start server
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`);
+
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(
+    `Server running in ${process.env.NODE_ENV || 'development'} mode on port ${PORT}`
+  );
 });

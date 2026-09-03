@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Logo from './Logo';
 import './Footer.css';
 import { FiInstagram, FiLinkedin, FiYoutube, FiMail, FiPhone, FiMapPin } from 'react-icons/fi';
 
@@ -11,11 +12,7 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="gv-footer-brand">
             <Link to="/" className="gv-footer-logo">
-              <span className="gv-logo-icon">GV</span>
-              <div className="gv-logo-text">
-                <span className="gv-logo-name">GLOW</span>
-                <span className="gv-logo-tagline">VISION TECH</span>
-              </div>
+              <Logo size={38} light />
             </Link>
             <p className="gv-footer-desc">
               Building digital sales channels that connect manufacturers with online customers.

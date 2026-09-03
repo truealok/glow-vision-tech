@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import Logo from './Logo';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -25,12 +26,8 @@ const Navbar = () => {
     <>
       <nav className={`gv-navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="gv-container gv-navbar-inner">
-          <Link to="/" className="gv-logo">
-            <span className="gv-logo-icon">GV</span>
-            <div className="gv-logo-text">
-              <span className="gv-logo-name">GLOW</span>
-              <span className="gv-logo-tagline">VISION TECH</span>
-            </div>
+          <Link to="/" style={{ textDecoration: 'none' }}>
+            <Logo size={38} />
           </Link>
 
           <ul className="gv-nav-links">

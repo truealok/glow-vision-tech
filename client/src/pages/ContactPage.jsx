@@ -1,4 +1,5 @@
 import React from 'react';
+import Logo from '../components/Logo';
 import './Pages.css';
 import './ContactPage.css';
 
@@ -9,11 +10,7 @@ const ContactPage = () => {
       <section className="gv-page-hero">
         <div className="gv-container">
           <div className="gv-contact-brand">
-            <span className="gv-logo-icon" style={{ width: 48, height: 48, fontSize: 16 }}>GV</span>
-            <div className="gv-logo-text">
-              <span className="gv-logo-name" style={{ fontSize: 20 }}>GLOW</span>
-              <span className="gv-logo-tagline" style={{ fontSize: 11 }}>VISION TECH</span>
-            </div>
+            <Logo size={44} />
           </div>
           <h1>Get In Touch With Us</h1>
           <p>We're here to help you grow your business globally.</p>
@@ -54,46 +51,57 @@ const ContactPage = () => {
               <h3>Connect With Us</h3>
               <div className="gv-contact-social-grid">
                 <a href="#" className="gv-contact-social-item">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                  </svg>
+                  <span className="gv-social-icon-circle" style={{ background: 'linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)' }}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                    </svg>
+                  </span>
                   <span>Instagram</span>
                 </a>
                 <a href="#" className="gv-contact-social-item">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <polygon points="23 7 16 12 23 17 23 7" />
-                    <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
-                  </svg>
+                  <span className="gv-social-icon-circle" style={{ background: '#FF0000' }}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <polygon points="23 7 16 12 23 17 23 7" />
+                      <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+                    </svg>
+                  </span>
                   <span>YouTube</span>
                 </a>
                 <a href="#" className="gv-contact-social-item">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
-                  </svg>
+                  <span className="gv-social-icon-circle" style={{ background: '#000' }}>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff">
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    </svg>
+                  </span>
                   <span>X (Twitter)</span>
                 </a>
                 <a href="#" className="gv-contact-social-item">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="12" cy="12" r="10" />
-                    <path d="M8 12a4 4 0 018 0" />
-                    <circle cx="12" cy="12" r="1" />
-                  </svg>
+                  <span className="gv-social-icon-circle" style={{ background: '#000' }}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M2 12C2 6.5 6.5 2 12 2s10 4.5 10 10-4.5 10-10 10S2 17.5 2 12z" />
+                      <path d="M8 12a4 4 0 018 0" fill="none" />
+                      <circle cx="12" cy="12" r="1" fill="#fff" stroke="none" />
+                    </svg>
+                  </span>
                   <span>Threads</span>
                 </a>
                 <a href="#" className="gv-contact-social-item">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="12" cy="12" r="10" />
-                    <line x1="12" y1="8" x2="12" y2="16" />
-                    <line x1="8" y1="12" x2="16" y2="12" />
-                  </svg>
+                  <span className="gv-social-icon-circle" style={{ background: '#2AABEE' }}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M21 3L9 13" />
+                      <path d="M21 3l-4 18-5-7-7-5z" />
+                    </svg>
+                  </span>
                   <span>Telegram</span>
                 </a>
                 <a href="#" className="gv-contact-social-item">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
-                  </svg>
+                  <span className="gv-social-icon-circle" style={{ background: '#25D366' }}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
+                    </svg>
+                  </span>
                   <span>WhatsApp</span>
                 </a>
               </div>

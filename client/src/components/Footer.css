@@ -20,6 +20,13 @@
   margin-bottom: 16px;
 }
 
+.gv-footer-brand .gv-logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
 .gv-footer-brand .gv-logo-name {
   color: #fff;
 }
