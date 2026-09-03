@@ -24,20 +24,20 @@ const createLeadValidation = [
     .isEmail().withMessage('Please provide a valid email address')
     .normalizeEmail(),
   body('city')
+    .optional()
     .trim()
-    .notEmpty().withMessage('City is required')
     .isLength({ max: 100 }).withMessage('City cannot exceed 100 characters'),
   body('state')
+    .optional()
     .trim()
-    .notEmpty().withMessage('State is required')
     .isLength({ max: 100 }).withMessage('State cannot exceed 100 characters'),
   body('country')
     .optional()
     .trim()
     .isLength({ max: 100 }).withMessage('Country cannot exceed 100 characters'),
   body('natureOfBusiness')
+    .optional()
     .trim()
-    .notEmpty().withMessage('Nature of business is required')
     .isLength({ max: 300 }).withMessage('Nature of business cannot exceed 300 characters'),
   body('yearsInBusiness')
     .optional()
@@ -74,7 +74,7 @@ const createLeadValidation = [
     .optional()
     .isIn(['always', 'mostly', 'made-to-order', '']),
   body('productCategory')
-    .notEmpty().withMessage('Product category is required')
+    .optional()
     .isIn(['Consumer Products', 'Apparel', 'Accessories', 'Home & Lifestyle', 'Electronics', 'Industrial', 'Other'])
     .withMessage('Invalid product category'),
   body('productDescription')

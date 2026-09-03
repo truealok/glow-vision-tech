@@ -30,13 +30,13 @@ const manufacturerLeadSchema = new mongoose.Schema(
     },
     city: {
       type: String,
-      required: [true, 'City is required'],
+      trim: true,
       trim: true,
       maxlength: [100, 'City cannot exceed 100 characters'],
     },
     state: {
       type: String,
-      required: [true, 'State is required'],
+      trim: true,
       trim: true,
       maxlength: [100, 'State cannot exceed 100 characters'],
     },
@@ -50,7 +50,7 @@ const manufacturerLeadSchema = new mongoose.Schema(
     // Business Details
     natureOfBusiness: {
       type: String,
-      required: [true, 'Nature of business is required'],
+      trim: true,
       trim: true,
       maxlength: [300, 'Nature of business cannot exceed 300 characters'],
     },
@@ -106,7 +106,7 @@ const manufacturerLeadSchema = new mongoose.Schema(
     // Product / Catalog Information
     productCategory: {
       type: String,
-      required: [true, 'Product category is required'],
+      trim: true,
       enum: [
         'Consumer Products',
         'Apparel',

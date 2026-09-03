@@ -24,8 +24,9 @@ const allowedOrigins =
   process.env.NODE_ENV === 'production'
     ? [
         'https://glow-vision-tech.vercel.app',
-        'https://glowvisiontech.com'
-      ]
+        'https://glowvisiontech.com',
+        process.env.CLIENT_URL
+      ].filter(Boolean)
     : [
         'http://localhost:5173',
         'http://localhost:3000'

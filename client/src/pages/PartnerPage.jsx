@@ -58,14 +58,7 @@ const PartnerPage = () => {
         contactPerson: formData.yourName,
         phone: formData.phoneNumber,
         email: formData.emailAddress,
-        city: '',
-        state: '',
-        country: 'India',
-        natureOfBusiness: 'Manufacturing',
-        productCategory: 'Other',
         productDescription: formData.products,
-        monthlyCapacity: '',
-        individualOrders: 'flexible',
         agreement: 'true',
       };
 

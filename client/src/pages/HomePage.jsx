@@ -105,8 +105,9 @@ const HomePage = () => {
             </span>
 
             <h1 className="gv-hero-title">
-              We Take Your<br />
-              Products<br />
+              We Connect<br />
+              We Deliver
+              We Grow<br />
               <span className="gv-hero-highlight">Local to Global.</span>
             </h1>
 
