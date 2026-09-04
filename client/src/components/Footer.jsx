@@ -45,7 +45,7 @@ const Footer = () => {
               </li>
               <li>
                 <FiMapPin size={16} />
-                <span>India</span>
+                <span>Thane East, Maharashtra, India</span>
               </li>
             </ul>
           </div>
@@ -70,9 +70,23 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Company Legal Details */}
+        <div className="gv-footer-legal">
+          <div className="gv-footer-legal-row">
+            <span className="gv-legal-item">GLOW VISION TECH PVT LTD</span>
+            <span className="gv-legal-divider">|</span>
+            <span className="gv-legal-item">CIN: U58201MR2026PTC479730</span>
+            <span className="gv-legal-divider">|</span>
+            <span className="gv-legal-item">GSTIN: 27AANCG3245R1ZV</span>
+          </div>
+          <p className="gv-footer-address">
+            AMBIKA SADAN, opp ATHAVAN SOCIETY, 2nd Floor, Flat No 9, Kopri Village, Thane East 400603, Maharashtra, India
+          </p>
+        </div>
+
         {/* Bottom Bar */}
         <div className="gv-footer-bottom">
-          <p>© 2026 Glow Vision Tech. All Rights Reserved.</p>
+          <p>© 2026 Glow Vision Tech Pvt Ltd. All Rights Reserved.</p>
           <div className="gv-footer-bottom-links">
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>
