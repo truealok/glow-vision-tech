@@ -4,7 +4,7 @@
 
 /* --- Page Wrapper --- */
 .gv-page {
-  padding-top: 72px; /* navbar height */
+  padding-top: 180px; /* navbar height */
   min-height: 100vh;
 }
 

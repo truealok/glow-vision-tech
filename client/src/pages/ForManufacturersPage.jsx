@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FiArrowRight } from 'react-icons/fi';
 import './Pages.css';
 import './ForManufacturersPage.css';
 
@@ -14,7 +13,8 @@ const benefits = [
       </svg>
     ),
     title: 'Access to Global Market',
-    description: 'We help you reach customers beyond your local market.',
+    description: 'We help you reach customers beyond your local market through online platforms.',
+    color: 'blue',
   },
   {
     icon: (
@@ -24,6 +24,7 @@ const benefits = [
     ),
     title: 'Complete Management',
     description: 'We handle marketing, orders, shipping and customer support end-to-end.',
+    color: 'green',
   },
   {
     icon: (
@@ -35,6 +36,7 @@ const benefits = [
     ),
     title: 'No Digital Experience Needed',
     description: "You don't need to worry about e-commerce, ads or technology.",
+    color: 'purple',
   },
   {
     icon: (
@@ -45,6 +47,7 @@ const benefits = [
     ),
     title: 'Timely Payments & Transparency',
     description: 'Clear processes, regular updates and timely settlements.',
+    color: 'amber',
   },
   {
     icon: (
@@ -55,6 +58,7 @@ const benefits = [
     ),
     title: 'Growth Without Risk',
     description: 'Increase sales and brand value without investing in online infrastructure.',
+    color: 'teal',
   },
   {
     icon: (
@@ -67,6 +71,7 @@ const benefits = [
     ),
     title: 'Long-Term Sales & Client Base',
     description: 'We help you build a sustainable business with repeat customers and long-term sales.',
+    color: 'rose',
   },
 ];
 
@@ -84,13 +89,20 @@ const ForManufacturersPage = () => {
         </div>
       </section>
 
-      {/* Benefits Grid */}
-      <section className="gv-section gv-benefits-section">
+      {/* Benefits Section */}
+      <section className="gv-section fm-benefits-section">
         <div className="gv-container">
-          <div className="gv-benefits-mfg-grid">
+          <div className="fm-benefits-header">
+            <div className="fm-badge">For Manufacturers</div>
+            <h2 className="fm-section-title">Everything You Need to Succeed Online</h2>
+            <p className="fm-section-subtitle">Focus on what you do best — we handle the rest.</p>
+          </div>
+
+          <div className="fm-benefits-grid">
             {benefits.map((benefit, index) => (
-              <div className="gv-card gv-benefit-mfg-card" key={index}>
-                <div className="gv-benefit-mfg-icon">{benefit.icon}</div>
+              <div className={`fm-benefit-card fm-benefit-${benefit.color}`} key={index}>
+                <div className="fm-benefit-number">0{index + 1}</div>
+                <div className="fm-benefit-icon">{benefit.icon}</div>
                 <h4>{benefit.title}</h4>
                 <p>{benefit.description}</p>
               </div>
@@ -113,12 +125,12 @@ const ForManufacturersPage = () => {
             </div>
             <div className="gv-cta-strip-text">
               <h3>Let's Build Something Big Together.</h3>
-              <p>Join hands with Glow Vision Tech and unlock the true potential of your products in the online world.</p>
+              <p>Join hands with Glow Vision Tech and unlock the true potential of your products.</p>
             </div>
+            <Link to="/partner-with-us" className="btn btn-white">
+              Partner With Us <span className="btn-arrow">→</span>
+            </Link>
           </div>
-          <Link to="/partner-with-us" className="gv-btn gv-btn-primary">
-            Partner With Us <FiArrowRight />
-          </Link>
         </div>
       </section>
     </div>

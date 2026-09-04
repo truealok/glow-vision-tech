@@ -95,9 +95,10 @@ const createLead = async (req, res) => {
 
     if (error.name === 'ValidationError') {
       const messages = Object.values(error.errors).map((err) => err.message);
+      const detailedMsg = messages.length > 0 ? messages.join('. ') : 'Validation failed';
       return res.status(400).json({
         success: false,
-        message: 'Validation failed',
+        message: detailedMsg,
         errors: messages,
       });
     }

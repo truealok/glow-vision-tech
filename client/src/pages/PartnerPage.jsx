@@ -65,7 +65,14 @@ const PartnerPage = () => {
       await submitManufacturerLead(payload);
       setSubmitted(true);
     } catch (err) {
-      setSubmitError(err.message || 'Something went wrong. Please try again.');
+      // Show specific field errors from server if available
+      const serverErrors = err.errors;
+      if (serverErrors && Array.isArray(serverErrors)) {
+        const fieldErrors = serverErrors.map(e => e.message || e).join('; ');
+        setSubmitError(fieldErrors || err.message || 'Something went wrong. Please try again.');
+      } else {
+        setSubmitError(err.message || 'Something went wrong. Please try again.');
+      }
     } finally {
       setSubmitting(false);
     }

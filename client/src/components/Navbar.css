@@ -15,48 +15,36 @@
   border-bottom-color: var(--color-border);
 }
 
-.gv-navbar-inner {
+/* Row 1: Logo image + Nav links + CTA button */
+.gv-navbar-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px;
+  padding: 10px 0;
 }
 
-/* Logo */
-.gv-logo {
+/* Logo link and image */
+.gv-navbar-logo-link {
   display: flex;
   align-items: center;
-  gap: 10px;
-}
-
-.gv-logo-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
+  text-decoration: none;
   flex-shrink: 0;
 }
 
-.gv-logo-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
+.gv-navbar-logo-img {
+  height: 120px;
+  width: auto;
+  object-fit: contain;
 }
 
-.gv-logo-name {
-  font-size: 16px;
-  font-weight: 800;
-  color: var(--color-text-primary);
-  letter-spacing: 1px;
-}
-
-.gv-logo-tagline {
-  font-size: 10px;
+/* Row 2: Tagline below logo */
+.gv-navbar-tagline {
+  font-size: 12px;
   font-weight: 600;
-  color: var(--color-text-muted);
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  color: var(--color-primary, #3b82f6);
+  letter-spacing: 0.3px;
+  padding-bottom: 8px;
+  line-height: 1;
 }
 
 /* Nav Links */
@@ -75,6 +63,7 @@
   color: var(--color-text-secondary);
   transition: color var(--transition-fast);
   position: relative;
+  white-space: nowrap;
 }
 
 .gv-nav-links a:hover {
@@ -100,6 +89,7 @@
 .gv-nav-cta {
   padding: 10px 22px;
   font-size: var(--font-size-sm);
+  white-space: nowrap;
 }
 
 /* Mobile Menu Button */
@@ -138,15 +128,19 @@
     display: flex;
   }
 
+  .gv-navbar-tagline {
+    display: none;
+  }
+
   .gv-mobile-nav {
     position: fixed;
-    top: 72px;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background-color: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(10px);
-    padding: 24px;
+    padding: 100px 24px 24px;
     flex-direction: column;
     gap: 0;
     z-index: 999;

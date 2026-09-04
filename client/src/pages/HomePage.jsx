@@ -103,12 +103,11 @@ const HomePage = () => {
               </svg>
               EMPOWERING MANUFACTURERS
             </span>
-
             <h1 className="gv-hero-title">
-              We Connect<br />
-              We Deliver
+              We Take Your<br />
+              Products
               <br />
-              <span className="gv-hero-highlight">We Grow</span>
+              <span className="gv-hero-highlight">Local to Global</span>
             </h1>
 
             <p className="gv-hero-description">

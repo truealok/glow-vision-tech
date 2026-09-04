@@ -29,8 +29,8 @@ const ContactPage = () => {
                 </svg>
               </div>
               <h3>Call Us</h3>
-              <a href="tel:+919876543210" className="gv-contact-card-value">+91 98765 43210</a>
-              <p className="gv-contact-card-note">Mon - Sat: 10:00 AM - 7:00 PM</p>
+              <a href="tel:+919876543210" className="gv-contact-card-value">+91 9892330117</a>
+              <p className="gv-contact-card-note">24 x 7</p>
             </div>
 
             {/* Email Us */}
@@ -42,7 +42,7 @@ const ContactPage = () => {
                 </svg>
               </div>
               <h3>Email Us</h3>
-              <a href="mailto:hello@glowvisiontech.com" className="gv-contact-card-value">hello@glowvisiontech.com</a>
+              <a href="mailto:hello@glowvisiontech.com" className="gv-contact-card-value">glowvisiontpl@gmail.com</a>
               <p className="gv-contact-card-note">We reply within 24 hours</p>
             </div>
 
@@ -120,9 +120,9 @@ const ContactPage = () => {
                   </svg>
                 </div>
                 <div className="gv-contact-leader-info">
-                  <h4>Naman Singh</h4>
+                  <h4>Sunil Singh</h4>
                   <p>Co-Founder & Director</p>
-                  <a href="tel:+919876543210">+91 98765 43210</a>
+                  <a href="tel:+919876543210">+91 98923 30117</a>
                 </div>
               </div>
               <div className="gv-contact-leader-card">
@@ -133,9 +133,9 @@ const ContactPage = () => {
                   </svg>
                 </div>
                 <div className="gv-contact-leader-info">
-                  <h4>Rahul Sharma</h4>
+                  <h4>Nilesh Patil</h4>
                   <p>Co-Founder & Director</p>
-                  <a href="tel:+919123456789">+91 91234 56789</a>
+                  <a href="tel:+919123456789">+91 98923 32005</a>
                 </div>
               </div>
             </div>

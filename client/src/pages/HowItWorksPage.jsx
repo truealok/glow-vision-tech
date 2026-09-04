@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FiArrowRight } from 'react-icons/fi';
 import './Pages.css';
 import './HowItWorksPage.css';
 
-const steps = [
+const yourSteps = [
   {
     number: '01',
     title: 'Manufacturing',
@@ -16,6 +15,9 @@ const steps = [
       </svg>
     ),
   },
+];
+
+const ourSteps = [
   {
     number: '02',
     title: 'Shipping & Logistics',
@@ -85,25 +87,98 @@ const HowItWorksPage = () => {
       {/* Page Hero */}
       <section className="gv-page-hero">
         <div className="gv-container">
-          <h1>Our End-to-End Process</h1>
-          <p>From your factory to your customer's doorstep.</p>
+          <h1>How It Works</h1>
+          <p>From your factory to your customer's doorstep — here's the complete journey.</p>
         </div>
       </section>
 
-      {/* Process Steps */}
-      <section className="gv-section gv-process-section">
+      {/* YOUR PART Section */}
+      <section className="gv-section hiw-section">
         <div className="gv-container">
-          <div className="gv-process-grid">
-            {steps.map((step, index) => (
-              <div className="gv-process-card" key={index}>
-                <div className="gv-process-card-number">{step.number}</div>
-                <div className="gv-process-card-icon">{step.icon}</div>
-                <h4>{step.title}</h4>
-                <p>{step.description}</p>
-                {index < steps.length - 1 && (
-                  <div className="gv-process-card-arrow">→</div>
+          <div className="hiw-section-header">
+            <div className="hiw-section-badge hiw-badge-you">Your Part</div>
+            <h2 className="hiw-section-title">What You Do</h2>
+            <p className="hiw-section-subtitle">Just focus on what you do best — manufacturing quality products.</p>
+          </div>
+          <div className="hiw-row hiw-row-single">
+            {yourSteps.map((step, index) => (
+              <React.Fragment key={index}>
+                <div className="hiw-card hiw-card-you">
+                  <div className="hiw-card-number">{step.number}</div>
+                  <div className="hiw-card-icon hiw-icon-you">{step.icon}</div>
+                  <h4>{step.title}</h4>
+                  <p>{step.description}</p>
+                </div>
+                <div className="hiw-arrow-down">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="12" y1="5" x2="12" y2="19" />
+                    <polyline points="19 12 12 19 5 12" />
+                  </svg>
+                </div>
+              </React.Fragment>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* OUR OPERATIONS Section */}
+      <section className="gv-section hiw-section hiw-ops-section">
+        <div className="gv-container">
+          <div className="hiw-section-header">
+            <div className="hiw-section-badge hiw-badge-us">Our Operations</div>
+            <h2 className="hiw-section-title">What We Handle</h2>
+            <p className="hiw-section-subtitle">We take care of everything else — so you don't have to worry about a thing.</p>
+          </div>
+
+          {/* Row 1: Steps 2-4 */}
+          <div className="hiw-row hiw-row-three">
+            {ourSteps.slice(0, 3).map((step, index) => (
+              <React.Fragment key={index}>
+                <div className="hiw-card hiw-card-us">
+                  <div className="hiw-card-number">{step.number}</div>
+                  <div className="hiw-card-icon hiw-icon-us">{step.icon}</div>
+                  <h4>{step.title}</h4>
+                  <p>{step.description}</p>
+                </div>
+                {index < 2 && (
+                  <div className="hiw-arrow-right">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12" />
+                      <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                  </div>
                 )}
-              </div>
+              </React.Fragment>
+            ))}
+          </div>
+
+          {/* Arrow down between rows */}
+          <div className="hiw-arrow-down hiw-arrow-row">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <polyline points="19 12 12 19 5 12" />
+            </svg>
+          </div>
+
+          {/* Row 2: Steps 5-6 */}
+          <div className="hiw-row hiw-row-two">
+            {ourSteps.slice(3).map((step, index) => (
+              <React.Fragment key={index}>
+                <div className="hiw-card hiw-card-us">
+                  <div className="hiw-card-number">{step.number}</div>
+                  <div className="hiw-card-icon hiw-icon-us">{step.icon}</div>
+                  <h4>{step.title}</h4>
+                  <p>{step.description}</p>
+                </div>
+                {index < 1 && (
+                  <div className="hiw-arrow-right">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12" />
+                      <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                  </div>
+                )}
+              </React.Fragment>
             ))}
           </div>
         </div>
@@ -123,6 +198,9 @@ const HowItWorksPage = () => {
               <h3>We Handle Everything In Between, So You Can Focus On What You Do Best.</h3>
               <p>Manufacture great products.</p>
             </div>
+            <Link to="/partner-with-us" className="btn btn-white">
+              Partner With Us <span className="btn-arrow">→</span>
+            </Link>
           </div>
         </div>
       </section>

@@ -37,11 +37,11 @@ const Footer = () => {
             <ul>
               <li>
                 <FiMail size={16} />
-                <span>hello@glowvisiontech.com</span>
+                <span>glowvisiontpl@gmail.com</span>
               </li>
               <li>
                 <FiPhone size={16} />
-                <span>+91 98765 43210</span>
+                <span>+91 98923 30117</span>
               </li>
               <li>
                 <FiMapPin size={16} />
